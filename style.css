@@ -121,43 +121,123 @@ a {
     padding: 50px;
   }
 
+  .images-container, .team-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .images-container {
     display: flex;
     justify-content: space-around;
-    max-width: 100%;
+    width: 100%;
     padding: 3px;
   }
-img {
+
+.card img {
     display: block;
     margin: auto;
     height: 100%;
     max-width: 100%;
 }
+
+
   .card {
     display: flex;
     flex-direction: column;
     text-align: center;
     flex-wrap: wrap;
-    flex-grow: 1;
     height: 200px;
-    width: 400px;
+    width: 200px;
   }
 
-p {
-    display: flex;
+.card p {
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 24px;
+      font-size: 24px;
+      padding: 5px;
 }
 
 
- @media only screen and (max-width: 600px) {
-
-   img {
-      height: 200px;
-      width: 400px;
-      margin: 0;
+@media only screen and (max-width: 1125px) {
+    .images-container {
+        flex-flow: column;
+        padding: 5px;
+        align-items: center;
     }
 
+}
 
+ @media only screen and (max-width: 600px) {
+.images-container {
+    flex-flow: column;
+    padding: 5px;
+    align-items: center;
+}
+  }
+
+  #team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .team-container{
+    display: flex;
+    text-align: center;
+  }
+  .team-header {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+  }
+
+  .team-card {
+    color: white;
+  }
+
+
+  .team-card img{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    padding: 10px;
+  }
+
+  #team {
+    display: flex;
+    height: 40rem;
+    background-image: url('/background.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+  }
+.footer-header {
+    font-size: 36px;
+    padding: 10px;
+}
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    footer .content {
+      font-size: .625rem;
+    }
   }
